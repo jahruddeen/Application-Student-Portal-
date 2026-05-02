@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Planner - Project Work Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .form-control {
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+        }
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header bg-white border-0 pt-4">
+                        <h2 class="card-title text-center mb-0">📝 Project Work Planner</h2>
+                        <p class="text-center text-muted">Enter your project details for validation</p>
+                    </div>
+                    <div class="card-body p-4">
+                        <form method="POST">
+                            <div class="mb-3">
+                                <label for="topic" class="form-label">Project Topic</label>
+                                <input type="text" class="form-control" id="topic" name="topic" required
+                                       placeholder="e.g., Digital Marketing Strategies">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="specialization" class="form-label">Field of Specialization</label>
+                                <input type="text" class="form-control" id="specialization" name="specialization" required
+                                       placeholder="e.g., Business Administration">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Project Title (≤ 12 words)</label>
+                                <input type="text" class="form-control" id="title" name="title" required
+                                       placeholder="e.g., Impact of Social Media on Consumer Behavior">
+                                <div class="form-text">Maximum 12 words allowed</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="estimated_words" class="form-label">Estimated Report Words</label>
+                                    <input type="number" class="form-control" id="estimated_words" name="estimated_words" required
+                                           placeholder="15000-30000" min="15000" max="30000">
+                                    <div class="form-text">15,000 - 30,000 words</div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="estimated_abstract_words" class="form-label">Estimated Abstract Words</label>
+                                    <input type="number" class="form-control" id="estimated_abstract_words" name="estimated_abstract_words" required
+                                           placeholder="3000-5000" min="3000" max="5000">
+                                    <div class="form-text">3,000 - 5,000 words</div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button type="submit" class="btn btn-primary me-md-2">Validate & Generate</button>
+                                <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

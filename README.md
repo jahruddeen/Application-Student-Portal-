@@ -9,25 +9,38 @@ This Python utility helps students plan and validate a project work proposal bas
 - Validates estimated report length (15,000 to 30,000 words)
 - Validates estimated abstract length (3,000 to 5,000 words)
 - Generates a detailed markdown project report skeleton with extended abstract structure
-- Supports both GUI and CLI interaction
+- Supports GUI, CLI, and Web interfaces
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
 
-### GUI mode (recommended)
-
+### Desktop GUI (recommended)
 ```powershell
 python project_ready.py
 ```
 
-A window will open where you can enter project details, view guidelines, validate input, and save the report skeleton.
-
-### CLI mode
-
+### Command Line Interface
 ```powershell
 python project_ready.py --cli
 ```
 
-Follow the prompts in the terminal.
+### Web Application
+```powershell
+python app.py
+```
+Then open http://127.0.0.1:5000 in your browser.
+
+## Web App Features
+
+- **Home Page**: Overview and navigation
+- **Guidelines**: Complete project work guidelines
+- **Project Planner**: Form-based project validation and skeleton generation
+- **Download**: Generated report skeleton download
 
 ## Output
 
